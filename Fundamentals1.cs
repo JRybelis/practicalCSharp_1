@@ -1,8 +1,9 @@
 ﻿using System;
 
+
 namespace FirstProject
 {
-    class Program
+    class Fundamentals1
     {
         static void Main(string[] args)
         {
