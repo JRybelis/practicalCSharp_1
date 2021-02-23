@@ -6,10 +6,19 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
+            int birthYear;
+            
             Console.WriteLine("Please enter your birth year.");
             string userInput = Console.ReadLine();
+            if (int.TryParse(userInput, out birthYear))
+            {
+                int age = DateTime.Now.Year - birthYear;
+                Console.WriteLine("You are " + age);
+            } else
+            {
+                Console.WriteLine("The value supplied was not a number.");
+            }
 
-            int birthYear = int.Parse(userInput);
             bool isUserOfLegalAge = DateTime.Now.Date.Year - birthYear > 18;
 
             if (isUserOfLegalAge)
